@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import device, { breakpoints } from '../../utils/mediaUtil';
+import device, { breakpoints } from '../utils/mediaUtil';
 
-interface IProps {
+interface IContainer {
   children: JSX.Element[];
 }
 
-const ContentContainer: React.FC<IProps> = ({ children }) => {
+const ContentContainer: React.FC<IContainer> = ({ children }) => {
   return <StyledContainer>{children}</StyledContainer>;
 };
 

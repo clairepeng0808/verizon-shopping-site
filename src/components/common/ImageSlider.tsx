@@ -7,7 +7,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Transition } from 'react-transition-group';
 
-const ImageSlider: React.FC<{ images: Array<string> }> = ({ images }) => {
+const ImageSlider: React.FC<{ images: Array<string>; id: string }> = ({
+  images,
+}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
   const length = images.length;
@@ -31,33 +33,27 @@ const ImageSlider: React.FC<{ images: Array<string> }> = ({ images }) => {
       <LeftArrow
         icon={faChevronCircleLeft}
         onClick={clickPrevious}
-        active={showArrow}
+        active={showArrow.toString()}
       />
       <RightArrow
         icon={faChevronCircleRight}
         size="lg"
         onClick={clickNext}
-        active={showArrow}
+        active={showArrow.toString()}
       />
-      {images.map((image, index) => {
+      {images.map((image, index, id) => {
         return (
-          <>
-            <Transition
-              in={index === currentImage}
-              timeout={300}
-              appear
-              unmountOnExit
-            >
+          <div key={`image-${id}-${index}`}>
+            <Transition in={index === currentImage} timeout={100} unmountOnExit>
               {(transitionState) => (
                 <Image
                   transitionState={transitionState}
-                  key={`image-${index}`}
                   src={image}
                   alt="product"
                 />
               )}
             </Transition>
-          </>
+          </div>
         );
       })}
     </SliderWrapper>
@@ -71,7 +67,6 @@ const SliderWrapper = styled.div`
   height: 150px;
   transition: 0.5s ease;
   z-index: 20;
-  overflow: hidden;
 `;
 
 const Image = styled.img<{ transitionState: TransitionStatetType }>`
@@ -81,20 +76,20 @@ const Image = styled.img<{ transitionState: TransitionStatetType }>`
   height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-  transition: all 600ms;
+  user-select: none;
 `;
 
-const RightArrow = styled(ArrowIcon)<{ active: boolean }>`
+const RightArrow = styled(ArrowIcon)<{ active: string }>`
   right: 12px;
   font-size: 24px;
-  opacity: ${(props) => (props.active ? 1 : 0)};
+  opacity: ${(props) => (props.active === 'true' ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
 `;
 
-const LeftArrow = styled(ArrowIcon)<{ active: boolean }>`
+const LeftArrow = styled(ArrowIcon)<{ active: string }>`
   left: 12px;
   font-size: 24px;
-  opacity: ${(props) => (props.active ? 1 : 0)};
+  opacity: ${(props) => (props.active === 'true' ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
 `;
 

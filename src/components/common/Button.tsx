@@ -3,9 +3,8 @@ import palette from '../styles/palette';
 
 export const FullWidthButton = styled.button<{ empty?: boolean }>`
   position: fixed;
+  left: 0;
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
   width: 100%;
   padding: 20px 12px;
   background-image: linear-gradient(
@@ -23,9 +22,8 @@ export const FullWidthButton = styled.button<{ empty?: boolean }>`
   background-size: 200% 100%;
 
   &:hover {
-    background-position: 100% 0;
-    opacity: 0.9;
     cursor: pointer;
+    background-position: 100% 0;
     transition: all ease-in-out 0.3s;
   }
 
@@ -34,7 +32,7 @@ export const FullWidthButton = styled.button<{ empty?: boolean }>`
     css`
       color: black;
       transition: background ease-in-out 0.3s;
-      background-image: none;
-      box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+      background: ${palette.gray};
+      box-shadow: 0px 0px 20px 2px rgb(0 0 0 / 10%);
     `}
 `;

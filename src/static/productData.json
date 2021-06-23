@@ -8,6 +8,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
+    "discount": "10%off",
     "ratings": 4.5
   },
   {
@@ -30,6 +31,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
+    "discount": "20%off",
     "ratings": 5
   },
   {
@@ -52,6 +54,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
+    "discount": "24%off",
     "ratings": 2.8
   },
   {
@@ -85,6 +88,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
+    "discount": "12%off",
     "ratings": 1
   },
   {
@@ -96,6 +100,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
+    "discount": "30%off",
     "ratings": 1
   },
   {
@@ -107,7 +112,7 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
-    "ratings": 1
+    "ratings": 4
   },
   {
     "id": "11",
@@ -118,7 +123,8 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
-    "ratings": 1
+    "discount": "12%off",
+    "ratings": 2
   },
   {
     "id": "12",
@@ -129,6 +135,6 @@
     ],
     "title": "Orren Ellis Chana 3-Light LED Kitchen Island Dome Pendant",
     "price": 790,
-    "ratings": 1
+    "ratings": 3.5
   }
 ]

@@ -8,7 +8,7 @@ const ProductCardSection: React.FC = () => {
     <SectionWrapper>
       <SectionTitle>Top Products</SectionTitle>
       <ProductWrapper>
-        {productData.map((product: any) => (
+        {productData.map((product) => (
           <ProductCard key={product.id} productInfo={product} />
         ))}
       </ProductWrapper>

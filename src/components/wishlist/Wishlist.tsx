@@ -9,11 +9,10 @@ interface WishlistProps {
 }
 
 const Wishlist: React.FC<WishlistProps> = ({ list }) => {
-  console.log();
   if (list.length === 0) {
     return (
       <ContentWrapper>
-        <EmptyWishlistIcon className="logo" />
+        <EmptyWishlistIcon />
         <EmptyText>
           Your wishlist is still empty. Go add some items to it!
         </EmptyText>

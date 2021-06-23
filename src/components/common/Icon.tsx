@@ -10,13 +10,10 @@ interface IconProps {
   onClick?: () => void;
 }
 const Icon: React.FC<IconProps> = (props) => {
-  return (
-    <IconWrapper>
-      <FontAwesomeIcon {...props} />
-    </IconWrapper>
-  );
+  return <StyledIcon {...props} />;
 };
-const IconWrapper = styled.div`
+
+const StyledIcon = styled(FontAwesomeIcon)`
   display: inline;
 `;
 

@@ -1,5 +1,3 @@
-type ImagesTypes = Array<string>;
-
 type TransitionStatetType =
   | 'entering'
   | 'entered'
@@ -9,12 +7,13 @@ type TransitionStatetType =
 
 type ProductInfoType = {
   id: string;
-  images: ImagesTypes;
+  images: Array<string>;
   title: string;
   price: number;
+  discount?: string;
   ratings: number;
 };
 
-type ProductInitialStateType = {
+type ProductInitStateType = {
   wishlist: Array<ProductInfoType>;
 };

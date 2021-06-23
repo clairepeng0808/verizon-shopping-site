@@ -1,13 +1,13 @@
 import { createContext, Dispatch } from 'react';
-import { Action } from '../components/reducer/productReducer';
+import { Action } from '../reducer/ProductReducer';
 
-const initialState: ProductInitialStateType = {
+export const productInitState: ProductInitStateType = {
   wishlist: [],
 };
 
-const ProductContext = createContext<{
-  state: ProductInitialStateType;
+const productContext = createContext<{
+  state: ProductInitStateType;
   dispatch: Dispatch<Action>;
-}>({ state: initialState, dispatch: () => null });
+}>({ state: productInitState, dispatch: () => null });
 
-export default ProductContext;
+export default productContext;

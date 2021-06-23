@@ -1,12 +1,8 @@
-type State = {
-  wishlist: Array<ProductInfoType>;
-};
-
 export type Action =
   | { type: 'ADD_TO_WISH_LIST'; product: ProductInfoType }
   | { type: 'REMOVE_FROM_WISH_LIST'; id: string };
 
-const ProductReducer = (state: State, action: Action) => {
+const ProductReducer = (state: ProductInitStateType, action: Action) => {
   switch (action.type) {
     case 'ADD_TO_WISH_LIST':
       return {

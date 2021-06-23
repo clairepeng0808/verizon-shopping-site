@@ -104,7 +104,6 @@ const ModalWrapper = styled.div<{
       ? `translate(-50%,0)`
       : `translate(-50%,200px)`};
   transition: all 500ms ease-in-out;
-
   ${device.sm} {
     padding: 10px 10px;
   }

@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+## <div align='center'>💡 Verizon Media Shopping Site</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align='center'>
+<p align='center'>
+<p><img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=typescript&logoColor=%2361DAFB"/></p>
+A Sample product page for e-commerce websites.
+</p>
 
-## Available Scripts
+<p><strong><a href="https://clairepeng0808.github.io/verizon-shopping-site/">
+Click here for Live demo</a></strong>
+</p>
+</div>
 
-In the project directory, you can run:
+### ✨ Features
 
-### `yarn start`
+- Built with React & Typescript.
+- A responsive card view page.
+- Users can add products to their wishlist.
+- Modern & Responsive UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ⚙️ Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+From your command line, first clone the project:
 
-### `yarn test`
+#### Clone this repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```zsh
+$ git clone git@github.com:clairepeng0808/verizon-shopping-site.git
 
-### `yarn build`
+# Go into the repository
+$ cd verizon-shopping-site
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Remove current origin repository
+$ git remote remove origin
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Install the dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```zsh
+# Install dependencies
+$ yarn install
 
-### `yarn eject`
+# Start dev development server
+$ yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After installation, open [http://localhost:3000](http://localhost:3000), or if you are running both frontend and the backend, you can run it on [http://localhost:3001](http://localhost:3000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🥁 Add your own deploy scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you want to deploy to github pages, please refer to the [deployment manual](https://create-react-app.dev/docs/deployment/#step-1-add-homepage-to-packagejson) here.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Add your deploy scripts to package.json
 
-## Learn More
+```json
+  "predeploy": "yarn build",
+  "deploy": "gh-pages -d build",
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Add your homoepage root to package.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+  "homepage": YOUR_GITHUBPAGE_URL
+```
+
+### 📚 License
+
+<img src="https://img.shields.io/github/license/clairepeng0808/smart-brain-app?style=flat-square&color=9cf" />

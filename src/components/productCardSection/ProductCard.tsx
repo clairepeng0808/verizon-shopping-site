@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from 'react';
 import styled from 'styled-components';
-import { faStar, faStarHalf, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as faRegularHeart } from '@fortawesome/free-regular-svg-icons';
+import ProductContext from '../../context/ProductContext';
 import palette from '../styles/palette';
 import Icon from '../common/Icon';
-import { mediaQueryString } from '../../utils/mediaUtil';
-import ProductContext from '../../context/productContext';
 import ImageSlider from '../common/ImageSlider';
+import Badge from '../common/Badge';
+import { faStar, faStarHalf, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faRegularHeart } from '@fortawesome/free-regular-svg-icons';
 
 interface ProductProps {
   key: string;
@@ -27,7 +27,7 @@ const ProductCard: React.FC<ProductProps> = ({ productInfo }) => {
 
   useEffect(() => {
     const renderRatingStars = (id: string, ratings: number) => {
-      let starList: JSX.Element[] = [];
+      let starList: Array<JSX.Element> = [];
       for (let i = 0; i < Math.trunc(ratings); i++) {
         starList.push(
           <Icon
@@ -85,7 +85,8 @@ const ProductCard: React.FC<ProductProps> = ({ productInfo }) => {
 
   return (
     <CardContainer>
-      <ImageSlider images={productInfo.images} />
+      {productInfo.discount && <DiscountBadge text={productInfo.discount} />}
+      <ImageSlider id={productInfo.id} images={productInfo.images} />
       <ProductInfo>
         <ProductTitle>${productInfo.title}</ProductTitle>
         <ProductPrice>${productInfo.price}</ProductPrice>
@@ -97,15 +98,12 @@ const ProductCard: React.FC<ProductProps> = ({ productInfo }) => {
 };
 
 const CardContainer = styled.div`
+  position: relative;
   border-radius: 10px;
   max-width: 230px;
   border: 1px solid ${palette.gray};
   cursor: pointer;
   transition: all ease-in-out 0.3s;
-
-  ${mediaQueryString(522)} {
-    max-width: 280px;
-  }
   &:hover {
     transition: all ease-in-out 0.3s;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
@@ -115,6 +113,13 @@ const CardContainer = styled.div`
 const ProductInfo = styled.div`
   padding: 10px 10px;
   font-size: 20px;
+`;
+
+const DiscountBadge = styled(Badge)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 30;
 `;
 
 const ProductTitle = styled.h5`
@@ -136,9 +141,6 @@ const AddToWishList = styled.div`
   margin: 10px 5px 5px 0;
   text-align: right;
   transition: all ease-in-out 0.3s;
-  &:focus {
-    transition: all ease-in-out 0.3s;
-  }
 `;
 
 export default React.memo(ProductCard);

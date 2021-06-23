@@ -1,16 +1,18 @@
 import React, { useReducer, useState } from 'react';
 import styled from 'styled-components';
-import ContentContainer from '../components/containers/ContentContainer';
+import ContentContainer from '../containers/ContentContainer';
 import ProductCardSection from '../components/productCardSection/ProductCardSection';
-import ProductContext from '../context/productContext';
-import ProductReducer from '../components/reducer/productReducer';
+import ProductContext from '../context/ProductContext';
+import ProductReducer from '../reducer/ProductReducer';
 import Modal from '../components/common/Modal';
 import { FullWidthButton } from '../components/common/Button';
 import Wishlist from '../components/wishlist/Wishlist';
+import { productInitState } from '../context/ProductContext';
 
 const ProductPage: React.FC = () => {
-  const [state, dispatch] = useReducer(ProductReducer, { wishlist: [] });
+  const [state, dispatch] = useReducer(ProductReducer, productInitState);
   const [showWishList, setShowWishlist] = useState(false);
+  const { wishlist } = state;
 
   return (
     <ProductContext.Provider value={{ state, dispatch }}>
@@ -18,13 +20,13 @@ const ProductPage: React.FC = () => {
         <ProductCardSection />
         <WishListButton
           onClick={() => setShowWishlist(true)}
-          empty={state.wishlist.length === 0}
+          empty={wishlist.length === 0}
         >
-          {state.wishlist.length} Products in Wishlist
+          {wishlist.length} Products in Wishlist
         </WishListButton>
       </ContentContainer>
       <Modal show={showWishList} onClose={() => setShowWishlist(false)}>
-        <Wishlist list={state.wishlist} />
+        <Wishlist list={wishlist} />
       </Modal>
     </ProductContext.Provider>
   );
