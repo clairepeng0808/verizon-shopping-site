@@ -133,9 +133,23 @@ const ModalBody = styled.div`
   padding: 5px 10px;
   max-height: 50vh;
   overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+
   ${device.sm} {
     padding: 5px;
     max-height: 60vh;
+  }
+  &::-webkit-scrollbar {
+    transition: all 0.3s ease-in-out;
+
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    transition: all 0.3s ease-in-out;
+
+    background: #c2c5c9;
+    border-radius: 6px;
   }
 `;
 
