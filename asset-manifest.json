@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/verizon-shopping-site/static/js/main.2faf7fda.chunk.js",
-    "main.js.map": "/verizon-shopping-site/static/js/main.2faf7fda.chunk.js.map",
+    "main.js": "/verizon-shopping-site/static/js/main.e7d0f83a.chunk.js",
+    "main.js.map": "/verizon-shopping-site/static/js/main.e7d0f83a.chunk.js.map",
     "runtime-main.js": "/verizon-shopping-site/static/js/runtime-main.2b87a12b.js",
     "runtime-main.js.map": "/verizon-shopping-site/static/js/runtime-main.2b87a12b.js.map",
-    "static/js/2.c017399a.chunk.js": "/verizon-shopping-site/static/js/2.c017399a.chunk.js",
-    "static/js/2.c017399a.chunk.js.map": "/verizon-shopping-site/static/js/2.c017399a.chunk.js.map",
+    "static/js/2.d2a90408.chunk.js": "/verizon-shopping-site/static/js/2.d2a90408.chunk.js",
+    "static/js/2.d2a90408.chunk.js.map": "/verizon-shopping-site/static/js/2.d2a90408.chunk.js.map",
     "static/js/3.31177edf.chunk.js": "/verizon-shopping-site/static/js/3.31177edf.chunk.js",
     "static/js/3.31177edf.chunk.js.map": "/verizon-shopping-site/static/js/3.31177edf.chunk.js.map",
     "index.html": "/verizon-shopping-site/index.html",
-    "static/js/2.c017399a.chunk.js.LICENSE.txt": "/verizon-shopping-site/static/js/2.c017399a.chunk.js.LICENSE.txt",
+    "static/js/2.d2a90408.chunk.js.LICENSE.txt": "/verizon-shopping-site/static/js/2.d2a90408.chunk.js.LICENSE.txt",
     "static/media/empty_wishlist.3784a84b.svg": "/verizon-shopping-site/static/media/empty_wishlist.3784a84b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b87a12b.js",
-    "static/js/2.c017399a.chunk.js",
-    "static/js/main.2faf7fda.chunk.js"
+    "static/js/2.d2a90408.chunk.js",
+    "static/js/main.e7d0f83a.chunk.js"
   ]
 }
