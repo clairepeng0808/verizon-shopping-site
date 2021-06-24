@@ -141,7 +141,6 @@ const ModalBody = styled.div`
   }
   &::-webkit-scrollbar {
     transition: all 0.3s ease-in-out;
-
     width: 8px;
   }
 
