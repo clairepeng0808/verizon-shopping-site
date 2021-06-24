@@ -44,7 +44,7 @@ $ yarn install
 $ yarn start
 ```
 
-After installation, open [http://localhost:3000](http://localhost:3000), or if you are running both frontend and the backend, you can run it on [http://localhost:3001](http://localhost:3000) to view it in the browser.
+After installation, open [http://localhost:3000](http://localhost:3000)
 
 ### 🥁 Add your own deploy scripts
 
