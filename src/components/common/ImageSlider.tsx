@@ -5,7 +5,6 @@ import {
   faChevronCircleRight,
   faChevronCircleLeft,
 } from '@fortawesome/free-solid-svg-icons';
-import { Transition } from 'react-transition-group';
 
 const ImageSlider: React.FC<{ images: Array<string>; id: string }> = ({
   images,
@@ -44,15 +43,7 @@ const ImageSlider: React.FC<{ images: Array<string>; id: string }> = ({
       {images.map((image, index, id) => {
         return (
           <div key={`image-${id}-${index}`}>
-            <Transition in={index === currentImage} timeout={100} unmountOnExit>
-              {(transitionState) => (
-                <Image
-                  transitionState={transitionState}
-                  src={image}
-                  alt="product"
-                />
-              )}
-            </Transition>
+            {index === currentImage && <Image src={image} alt="product" />}
           </div>
         );
       })}
@@ -65,11 +56,10 @@ const SliderWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 150px;
-  transition: 0.5s ease;
   z-index: 20;
 `;
 
-const Image = styled.img<{ transitionState: TransitionStatetType }>`
+const Image = styled.img`
   position: absolute;
   left: 0;
   width: 100%;
